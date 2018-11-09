@@ -356,7 +356,5 @@ if (message.content.startsWith(adminprefix + 'setT')) {
    message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)//حقوق دايموند كودز
 }
 });
-
-client.on('ready',async () => { client.channels.find(ch => ch.id === "510531317692104705" && ch.type === 'voice').join(); });
  
 client.login(process.env.BOT_TOKEN);
