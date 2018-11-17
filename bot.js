@@ -10,6 +10,13 @@ const fs = require('fs');
 const gif = require("gif-search");
 const client = new Discord.Client({disableEveryone: true});
  
+client.on('ready', () => {
+    client.user.setGame('Type 2help','https://www.twitch.tv/RezfixServer');
+    console.log('---------------');
+    console.log('2play Online')
+    console.log('---------------')
+  });
+
 const prefix = "2";
 /////////////////////////
 ////////////////////////
@@ -303,7 +310,7 @@ function play(guild, song) {
  
  
 client.on('message', message => {
-   if (message.content === '!help') {
+   if (message.content === '2help') {
        let helpEmbed = new Discord.RichEmbed()
        .setTitle('**أوامر الميوزك...**')
        .setDescription('**برفكس البوت (!)**')
@@ -356,11 +363,11 @@ if (message.content.startsWith(adminprefix + 'setT')) {
    message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)//حقوق دايموند كودز
 }
 });
-
+ 
 client.on('ready',async () => {
 console.log("Starting..");
 let g = client.guilds.get("493237177170395155");
-let c = g.channels.get("510531317692104705");
+let c = g.channels.get("513071426144829487");
 if(c.type === 'voice') {
 c.join();
 setInterval(() => {
@@ -370,5 +377,5 @@ if(!g.me.voiceChannel) c.join();
 console.log("Failed To Join:\n The Channel Type isn't \"text\"");
 }
 });
- 
+
 client.login(process.env.BOT_TOKEN);
