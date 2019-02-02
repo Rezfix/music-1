@@ -310,7 +310,7 @@ function play(guild, song) {
  
  
 client.on('message', message => {
-   if (message.content === '5help') {
+   if (message.content === '2help') {
        let helpEmbed = new Discord.RichEmbed()
        .setTitle('**أوامر الميوزك...**')
        .setDescription('**برفكس البوت (!)**')
@@ -339,7 +339,7 @@ client.on('message', message => {
    }
 });
  
-const adminprefix = "!";
+const adminprefix = "2";
 const devs = ['383606619671494659','383606619671494659'];
 client.on('message', message => {
  var argresult = message.content.split(` `).slice(1).join(' ');
